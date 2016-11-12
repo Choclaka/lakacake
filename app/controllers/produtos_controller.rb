@@ -1,8 +1,6 @@
 class ProdutosController < ApplicationController
   before_action :set_produto, only: [:show, :edit, :update, :destroy]
 
-
-
   # GET /produtos
   # GET /produtos.json
   def index
@@ -71,6 +69,6 @@ class ProdutosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def produto_params
-      params.require(:produto).permit(:descricao, :tipo, :nome, :preco)
+      params.require(:produto).permit(:descricao, :tipo, :nome, :preco, :foto)
     end
 end
